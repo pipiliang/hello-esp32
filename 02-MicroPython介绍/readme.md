@@ -82,7 +82,21 @@ Hard resetting...
 - [EMP-IDE](https://github.com/Singein/EMP-IDE):
 - WebREPL:官方提供的，比较简陋些。
 - [Mu](https://codewith.mu/en/download)
-- OpenIOE IDE PRO
+
+### 2.5 WebREPL
+
+WebREPL即通过浏览器进行交互式编程，按照以下步骤开启。
+- 首先，下载并执行 boot.py （详见附件代码文件）。
+  ```
+  import webrepl
+  # 需要先连接到 wifi，才能启动成功。
+  webrepl.start()
+  ```
+- 下载客户端工具，[点击下载此仓库](https://github.com/micropython/webrepl)。
+- 解压，执行`webrepl.html`，输入地址。
+
+
+
 
 
 
