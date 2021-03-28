@@ -47,7 +47,7 @@ $ esptool.py --chip esp32 --port COM3 write_flash -z 0x1000 firmware.bin
 ```
 参数说明：
 - z: 开始地址
-- firmware.bin：固件路径
+- firmware.bin：固件路径，这里使用的版本是：esp32-idf4-20210202-v1.14.bin
 
 看到以下信息，说明成功：
 ```
@@ -94,6 +94,21 @@ WebREPL即通过浏览器进行交互式编程，按照以下步骤开启。
   ```
 - 下载客户端工具，[点击下载此仓库](https://github.com/micropython/webrepl)。
 - 解压，执行`webrepl.html`，输入地址。
+
+
+## 3. FAQ
+
+### 3.1 ESP32正常启动，但为何 uPyCraft 无法连接，弹出烧录固件的窗口
+
+原因：板子启动时自动执行了某程序，且耗时较长，如：wifi自动连接。
+
+方法：putty 连接，执行以下代码：
+```bash
+> import uos
+> uos.remove('main.py')
+```
+如果，boot.py 中还有代码，也看下是否需要清理，方法同上。然后便可以连接上了，建议调试完成后，在实现自启动。
+
 
 
 
