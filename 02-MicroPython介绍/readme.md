@@ -71,7 +71,7 @@ Hard resetting...
 
 在 MicroPython 固件烧录成功之后，可以使用 Putty 通过串口连接到板子上。可以通过 `REPL`(Read Eval Print Loop) 交互式解释器执行代码，如下：
 
-![](../images/2-putty.jpg)
+![](./images/putty.jpg)
 
 ### 2.4 IDE
 
@@ -92,6 +92,9 @@ WebREPL即通过浏览器进行交互式编程，按照以下步骤开启。
   # 需要先连接到 wifi，才能启动成功。
   webrepl.start()
   ```
+  启动成功，如下图所示：
+
+  ![](images/webrepl.JPG)
 - 下载客户端工具，[点击下载此仓库](https://github.com/micropython/webrepl)。
 - 解压，执行`webrepl.html`，输入地址。
 

@@ -1,7 +1,9 @@
 
 # This file is executed on every boot (including wake-boot from deepsleep)
-#import esp
-#esp.osdebug(None)
+# import esp
+# esp.osdebug(None)
+
+# 代码写在 boot.py 或 main.py 中，启动就会执行
 
 import network
 import time
