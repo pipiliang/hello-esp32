@@ -15,3 +15,10 @@ ESP32是一个由 Espressif 提供的热门的WiFi/蓝牙单片机的片上系�
 - Boot: 下载按钮：按住Boot按钮并按下EN按钮初始化固件下载模式。然后用户可以通过串口下载固件。
 - USB: USB接口。是给板子供电以及ESP-WROOM-32与PC通信的接口。
 - I/O: ESP-WROOM-32 的大部分I/O引脚已由板上的两侧排针引出。用户可以对ESP32进行编程来实现各种功能，比如PWM,ADC,DAC,I2C,I2S,SPI 等。
+
+### 2.1 引脚说明
+eps32 引脚使用可以参考上图，但需要注意以下几点：
+ - Pins 1 and 3 are REPL UART TX and RX respectively
+ - Pins 6, 7, 8, 11, 16, and 17 are used for connecting the embedded flash, and are not recommended for other uses
+ - Pins 34-39 are input only, and also do not have internal pull-up resistors
+ - The pull value of some pins can be set to Pin.PULL_HOLD to reduce power consumption during deepsleep.
